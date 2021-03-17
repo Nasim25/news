@@ -1,192 +1,290 @@
-<div class="br-header">
-    <div class="br-header-left">
-        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href="#"><i
-                    class="icon ion-navicon-round"></i></a></div>
-        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href="#"><i
-                    class="icon ion-navicon-round"></i></a></div>
-        <div class="input-group hidden-xs-down wd-170 transition">
-            <input id="searchbox" type="text" class="form-control" placeholder="Search">
-            <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
-            </span>
-        </div><!-- input-group -->
-    </div><!-- br-header-left -->
-    <div class="br-header-right">
-        <nav class="nav">
-            <div class="dropdown">
-                <a href="#" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
-                    <i class="icon ion-ios-email-outline tx-24"></i>
-                    <!-- start: if statement -->
-                    <span class="square-8 bg-danger pos-absolute t-15 r-0 rounded-circle"></span>
-                    <!-- end: if statement -->
-                </a>
-                <div class="dropdown-menu dropdown-menu-header wd-300 pd-0-force">
-                    <div class="d-flex align-items-center justify-content-between pd-y-10 pd-x-20 bd-b bd-gray-200">
-                        <label class="tx-12 tx-info tx-uppercase tx-semibold tx-spacing-2 mg-b-0">Messages</label>
-                        <a href="#" class="tx-11">+ Add New Message</a>
-                    </div><!-- d-flex -->
+<div id="navbar" class="navbar">
+    <button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#sidebar">
+        <span class="fa fa-bars"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <small>
+            <i class="fa fa-desktop"></i>
+            FLATY Admin
+        </small>
+    </a>
 
-                    <div class="media-list">
-                        <!-- loop starts here -->
-                        <a href="#" class="media-list-link">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img3.jpg" class="wd-40 rounded-circle" alt="">
-                                <div class="media-body">
-                                    <div class="d-flex align-items-center justify-content-between mg-b-5">
-                                        <p class="mg-b-0 tx-medium tx-gray-800 tx-14">Donna Seay</p>
-                                        <span class="tx-11 tx-gray-500">2 minutes ago</span>
-                                    </div><!-- d-flex -->
-                                    <p class="tx-12 mg-b-0">A wonderful serenity has taken possession of my entire
-                                        soul, like these sweet mornings of spring.</p>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <!-- loop ends here -->
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img4.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <div class="d-flex align-items-center justify-content-between mg-b-5">
-                                        <p class="mg-b-0 tx-medium tx-gray-800 tx-14">Samantha Francis</p>
-                                        <span class="tx-11 tx-gray-500">3 hours ago</span>
-                                    </div><!-- d-flex -->
-                                    <p class="tx-12 mg-b-0">My entire soul, like these sweet mornings of spring.</p>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img7.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <div class="d-flex align-items-center justify-content-between mg-b-5">
-                                        <p class="mg-b-0 tx-medium tx-gray-800 tx-14">Robert Walker</p>
-                                        <span class="tx-11 tx-gray-500">5 hours ago</span>
-                                    </div><!-- d-flex -->
-                                    <p class="tx-12 mg-b-0">I should be incapable of drawing a single stroke at the
-                                        present moment{{ asset('backend/') }}.</p>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img5.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <div class="d-flex align-items-center justify-content-between mg-b-5">
-                                        <p class="mg-b-0 tx-medium tx-gray-800 tx-14">Larry Smith</p>
-                                        <span class="tx-11 tx-gray-500">Yesterday</span>
-                                    </div><!-- d-flex -->
-                                    <p class="tx-12 mg-b-0">When, while the lovely valley teems with vapour around
-                                        me, and the meridian sun strikes{{ asset('backend/') }}.</p>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <div class="pd-y-10 tx-center bd-t">
-                            <a href="#" class="tx-12"><i class="fa fa-angle-down mg-r-5"></i> Show All Messages</a>
-                        </div>
-                    </div><!-- media-list -->
-                </div><!-- dropdown-menu -->
-            </div><!-- dropdown -->
-            <div class="dropdown">
-                <a href="#" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
-                    <i class="icon ion-ios-bell-outline tx-24"></i>
-                    <!-- start: if statement -->
-                    <span class="square-8 bg-danger pos-absolute t-15 r-5 rounded-circle"></span>
-                    <!-- end: if statement -->
-                </a>
-                <div class="dropdown-menu dropdown-menu-header wd-300 pd-0-force">
-                    <div class="d-flex align-items-center justify-content-between pd-y-10 pd-x-20 bd-b bd-gray-200">
-                        <label
-                            class="tx-12 tx-info tx-uppercase tx-semibold tx-spacing-2 mg-b-0">Notifications</label>
-                        <a href="#" class="tx-11">Mark All as Read</a>
-                    </div><!-- d-flex -->
-
-                    <div class="media-list">
-                        <!-- loop starts here -->
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img8.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <p class="tx-13 mg-b-0 tx-gray-700"><strong
-                                            class="tx-medium tx-gray-800">Suzzeth Bungaos</strong> tagged you and 18
-                                        others in a post.</p>
-                                    <span class="tx-12">October 03, 2017 8:45am</span>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <!-- loop ends here -->
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img9.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <p class="tx-13 mg-b-0 tx-gray-700"><strong
-                                            class="tx-medium tx-gray-800">Mellisa Brown</strong> appreciated your
-                                        work <strong class="tx-medium tx-gray-800">The Social Network</strong></p>
-                                    <span class="tx-12">October 02, 2017 12:44am</span>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img10.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <p class="tx-13 mg-b-0 tx-gray-700">20+ new items added are for sale in your
-                                        <strong class="tx-medium tx-gray-800">Sale Group</strong>
-                                    </p>
-                                    <span class="tx-12">October 01, 2017 10:20pm</span>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <a href="#" class="media-list-link read">
-                            <div class="media pd-x-20 pd-y-15">
-                                <img src="{{ asset('backend/') }}/img/img5.jpg" class="wd-40 rounded-circle"
-                                    alt="">
-                                <div class="media-body">
-                                    <p class="tx-13 mg-b-0 tx-gray-700"><strong class="tx-medium tx-gray-800">Julius
-                                            Erving</strong> wants to connect with you on your conversation with
-                                        <strong class="tx-medium tx-gray-800">Ronnie Mara</strong>
-                                    </p>
-                                    <span class="tx-12">October 01, 2017 6:08pm</span>
-                                </div>
-                            </div><!-- media -->
-                        </a>
-                        <div class="pd-y-10 tx-center bd-t">
-                            <a href="#" class="tx-12"><i class="fa fa-angle-down mg-r-5"></i> Show All
-                                Notifications</a>
-                        </div>
-                    </div><!-- media-list -->
-                </div><!-- dropdown-menu -->
-            </div><!-- dropdown -->
-            <div class="dropdown">
-                <a href="#" class="nav-link nav-link-profile" data-toggle="dropdown">
-                    <span class="logged-name hidden-md-down">Katherine</span>
-                    <img src="{{ asset('backend/') }}/img/img1.jpg" class="wd-32 rounded-circle" alt="">
-                    <span class="square-10 bg-success"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-header wd-200">
-                    <ul class="list-unstyled user-profile-nav">
-                        <li><a href="#"><i class="icon ion-ios-person"></i> Edit Profile</a></li>
-                        <li><a href="#"><i class="icon ion-ios-gear"></i> Settings</a></li>
-                        <li><a href="#"><i class="icon ion-ios-download"></i> Downloads</a></li>
-                        <li><a href="#"><i class="icon ion-ios-star"></i> Favorites</a></li>
-                        <li><a href="#"><i class="icon ion-ios-folder"></i> Collections</a></li>
-                        <li><a href="{{route('admin.logout')}}"><i class="icon ion-power"></i> Sign Out</a></li>
-                    </ul>
-                </div><!-- dropdown-menu -->
-            </div><!-- dropdown -->
-        </nav>
-        <div class="navicon-right">
-            <a id="btnRightMenu" href="#" class="pos-relative">
-                <i class="icon ion-ios-chatboxes-outline"></i>
-                <!-- start: if statement -->
-                <span class="square-8 bg-danger pos-absolute t-10 r--5 rounded-circle"></span>
-                <!-- end: if statement -->
+    <!-- BEGIN Navbar Buttons -->
+    <ul class="nav flaty-nav pull-right">
+        <!-- BEGIN Button Tasks -->
+        <li class="hidden-xs">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-tasks"></i>
+                <span class="badge badge-warning">4</span>
             </a>
-        </div><!-- navicon-right -->
-    </div><!-- br-header-right -->
+
+            <!-- BEGIN Tasks Dropdown -->
+            <ul class="dropdown-navbar dropdown-menu">
+                <li class="nav-header">
+                    <i class="fa fa-check"></i>
+                    4 Tasks to complete
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">Software Update</span>
+                            <span class="pull-right">75%</span>
+                        </div>
+
+                        <div class="progress progress-mini">
+                            <div style="width:75%" class="progress-bar progress-bar-warning"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">Transfer To New Server</span>
+                            <span class="pull-right">45%</span>
+                        </div>
+
+                        <div class="progress progress-mini">
+                            <div style="width:45%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">Bug Fixes</span>
+                            <span class="pull-right">20%</span>
+                        </div>
+
+                        <div class="progress progress-mini">
+                            <div style="width:20%" class="progress-bar"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">Writing Documentation</span>
+                            <span class="pull-right">85%</span>
+                        </div>
+
+                        <div class="progress progress-mini progress-striped active">
+                            <div style="width:85%" class="progress-bar progress-bar-success"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="more">
+                    <a href="#">See tasks with details</a>
+                </li>
+            </ul>
+            <!-- END Tasks Dropdown -->
+        </li>
+        <!-- END Button Tasks -->
+
+        <!-- BEGIN Button Notifications -->
+        <li class="hidden-xs">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-bell"></i>
+                <span class="badge badge-important">5</span>
+            </a>
+
+            <!-- BEGIN Notifications Dropdown -->
+            <ul class="dropdown-navbar dropdown-menu">
+                <li class="nav-header">
+                    <i class="fa fa-warning"></i>
+                    5 Notifications
+                </li>
+
+                <li class="notify">
+                    <a href="#">
+                        <i class="fa fa-comment orange"></i>
+                        <p>New Comments</p>
+                        <span class="badge badge-warning">4</span>
+                    </a>
+                </li>
+
+                <li class="notify">
+                    <a href="#">
+                        <i class="fa fa-twitter blue"></i>
+                        <p>New Twitter followers</p>
+                        <span class="badge badge-info">7</span>
+                    </a>
+                </li>
+
+                <li class="notify">
+                    <a href="#">
+                        <img src="{{ asset('backend/') }}/img/demo/avatar/avatar2.jpg" alt="Alex" />
+                        <p>David would like to become moderator.</p>
+                    </a>
+                </li>
+
+                <li class="notify">
+                    <a href="#">
+                        <i class="fa fa-bug pink"></i>
+                        <p>New bug in program!</p>
+                    </a>
+                </li>
+
+                <li class="notify">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart green"></i>
+                        <p>You have some new orders</p>
+                        <span class="badge badge-success">+10</span>
+                    </a>
+                </li>
+
+                <li class="more">
+                    <a href="#">See all notifications</a>
+                </li>
+            </ul>
+            <!-- END Notifications Dropdown -->
+        </li>
+        <!-- END Button Notifications -->
+
+        <!-- BEGIN Button Messages -->
+        <li class="hidden-xs">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-envelope"></i>
+                <span class="badge badge-success">3</span>
+            </a>
+
+            <!-- BEGIN Messages Dropdown -->
+            <ul class="dropdown-navbar dropdown-menu">
+                <li class="nav-header">
+                    <i class="fa fa-comments"></i>
+                    3 Messages
+                </li>
+
+                <li class="msg">
+                    <a href="#">
+                        <img src="{{ asset('backend/') }}/img/demo/avatar/avatar3.jpg" alt="Sarah's Avatar" />
+                        <div>
+                            <span class="msg-title">Sarah</span>
+                            <span class="msg-time">
+                                <i class="fa fa-clock-o"></i>
+                                <span>a moment ago</span>
+                            </span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </a>
+                </li>
+
+                <li class="msg">
+                    <a href="#">
+                        <img src="{{ asset('backend/') }}/img/demo/avatar/avatar4.jpg" alt="Emma's Avatar" />
+                        <div>
+                            <span class="msg-title">Emma</span>
+                            <span class="msg-time">
+                                <i class="fa fa-clock-o"></i>
+                                <span>2 Days ago</span>
+                            </span>
+                        </div>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ...</p>
+                    </a>
+                </li>
+
+                <li class="msg">
+                    <a href="#">
+                        <img src="{{ asset('backend/') }}/img/demo/avatar/avatar5.jpg" alt="John's Avatar" />
+                        <div>
+                            <span class="msg-title">John</span>
+                            <span class="msg-time">
+                                <i class="fa fa-clock-o"></i>
+                                <span>8:24 PM</span>
+                            </span>
+                        </div>
+                        <p>Duis aute irure dolor in reprehenderit in ...</p>
+                    </a>
+                </li>
+
+                <li class="more">
+                    <a href="#">See all messages</a>
+                </li>
+            </ul>
+            <!-- END Notifications Dropdown -->
+        </li>
+        <!-- END Button Messages -->
+
+        <!-- BEGIN Button User -->
+        <li class="user-profile">
+            <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+                <img class="nav-user-photo" src="{{ asset('backend/') }}/img/demo/avatar/avatar1.jpg"
+                    alt="Penny's Photo" />
+                <span class="hhh" id="user_info">
+                    Penny
+                </span>
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+            <!-- BEGIN User Dropdown -->
+            <ul class="dropdown-menu dropdown-navbar" id="user_menu">
+                <li class="nav-header">
+                    <i class="fa fa-clock-o"></i>
+                    Logined From 20:45
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-cog"></i>
+                        Account Settings
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user"></i>
+                        Edit Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-question"></i>
+                        Help
+                    </a>
+                </li>
+
+                <li class="divider visible-xs"></li>
+
+                <li class="visible-xs">
+                    <a href="#">
+                        <i class="fa fa-tasks"></i>
+                        Tasks
+                        <span class="badge badge-warning">4</span>
+                    </a>
+                </li>
+                <li class="visible-xs">
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        Notifications
+                        <span class="badge badge-important">8</span>
+                    </a>
+                </li>
+                <li class="visible-xs">
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        Messages
+                        <span class="badge badge-success">5</span>
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-off"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+            <!-- BEGIN User Dropdown -->
+        </li>
+        <!-- END Button User -->
+    </ul>
+    <!-- END Navbar Buttons -->
 </div>
