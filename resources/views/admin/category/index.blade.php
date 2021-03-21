@@ -59,7 +59,10 @@
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $category->category_en }}</td>
                                         <td>{{ $category->category_bn }}</td>
-                                        <td><span class="label label-success">A</span></td>
+                                        <td>
+                                            <a href="{{route('category.edit',$category->id)}}"><i class="fas fa-edit text-primary"></i></a>
+                                            <a href="#" onclick="return confirm('Are you sure to delete')"><i class="fa fa-trash text-danger"></i></a>
+                                        </td>
                                     </tr>
                                 @endforeach
 

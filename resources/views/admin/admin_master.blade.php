@@ -13,6 +13,7 @@
     <!--base css styles-->
     <link rel="stylesheet" href="{{ asset('backend/') }}/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('backend/') }}/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <!--page specific css styles-->
 
@@ -20,7 +21,8 @@
     <link rel="stylesheet" href="{{ asset('backend/') }}/css/flaty.css">
 
     <link rel="stylesheet" href="{{ asset('backend/') }}/css/flaty-responsive.css">
-
+    <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/iziToast.js') }}"></script>
     <link rel="shortcut icon" href="{{ asset('backend/') }}/img/favicon.html">
 </head>
 
@@ -108,6 +110,7 @@
     </div>
     <!-- END Container -->
 
+    @include('vendor.lara-izitoast.toast')
 
     <!--basic scripts-->
     <script src="../../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -134,7 +137,5 @@
     <script src="{{ asset('backend/') }}/js/flaty-demo-codes.js"></script>
 
 </body>
-
-<!-- Mirrored from thetheme.io/flaty/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 12:40:08 GMT -->
 
 </html>
