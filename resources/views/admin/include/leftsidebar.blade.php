@@ -14,7 +14,7 @@
         </li>
         <!-- END Search Form -->
         <li class="active">
-            <a href="index.html">
+            <a href="{{route('dashboard')}}">
                 <i class="fa fa-dashboard"></i>
                 <span>Dashboard</span>
             </a>
@@ -37,7 +37,22 @@
             <!-- BEGIN Submenu -->
             <ul class="submenu">
                 <li><a href="{{route('category.index')}}">Category</a></li>
-                <li><a href="ui_button.html">Subcategory</a></li>
+                <li><a href="{{route('subcategory.index')}}">Subcategory</a></li>
+            </ul>
+            <!-- END Submenu -->
+        </li>
+        
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-desktop"></i>
+                <span>District</span>
+                <b class="arrow fa fa-angle-right"></b>
+            </a>
+
+            <!-- BEGIN Submenu -->
+            <ul class="submenu">
+                <li><a href="{{route('category.index')}}">District</a></li>
+                <li><a href="{{route('subcategory.index')}}">Subdistrict</a></li>
             </ul>
             <!-- END Submenu -->
         </li>
