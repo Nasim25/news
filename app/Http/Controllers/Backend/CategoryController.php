@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::getCategories();
-        return view('admin.category.index',compact('categories'));
+        return view('admin.category.index', compact('categories'));
     }
 
     /**
@@ -39,16 +39,13 @@ class CategoryController extends Controller
     {
         $request->validate([
             'category_en' => 'required|unique:categories',
-            'category_bn'=> 'required|unique:categories',
+            'category_bn' => 'required|unique:categories',
         ]);
-        
+
         Category::create($request->all());
 
-        $notification = array(
-            'message' => 'Category Inserted',
-            'alert-type'  => 'success',
-        );
-        return redirect()->route('category.index')->with($notification);
+        notify()->success("Category Inserted");
+        return redirect()->route('category.index');
     }
 
     /**
@@ -70,7 +67,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::where('id',$id)->first();
+        return view('admin.category.form',compact('category'));
     }
 
     /**
@@ -82,7 +80,18 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'category_en' => 'required|unique:categories,category_en,'.$id,
+            'category_bn' => 'required|unique:categories,category_bn,'.$id,
+        ]);
+
+        Category::where('id',$id)->update([
+            'category_en' => $request->category_en,
+            'category_bn' => $request->category_bn,
+        ]);
+        notify()->success("Category Updated");
+        return redirect()->route('category.index');
+
     }
 
     /**
