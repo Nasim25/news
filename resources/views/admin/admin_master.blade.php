@@ -13,10 +13,11 @@
     <!--base css styles-->
     <link rel="stylesheet" href="{{ asset('backend/') }}/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('backend/') }}/assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!--page specific css styles-->
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/') }}/assets/chosen-bootstrap/chosen.min.css" />
     <!--flaty css styles-->
     <link rel="stylesheet" href="{{ asset('backend/') }}/css/flaty.css">
 
@@ -24,6 +25,7 @@
     <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
     <script src="{{ asset('js/iziToast.js') }}"></script>
     <link rel="shortcut icon" href="{{ asset('backend/') }}/img/favicon.html">
+    @yield('admin_css')
 </head>
 
 <body>
@@ -119,10 +121,12 @@
             '<script src="{{ asset('backend/') }}/assets/jquery/jquery-2.1.1.min.js"><\/script>')
 
     </script>
+
     <script src="{{ asset('backend/') }}/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="{{ asset('backend/') }}/assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script src="{{ asset('backend/') }}/assets/jquery-cookie/jquery.cookie.js"></script>
-
+    <script type="text/javascript" src="{{ asset('backend/') }}/assets/chosen-bootstrap/chosen.jquery.min.js">
+    </script>
     <!--page specific plugin scripts-->
     <script src="{{ asset('backend/') }}/assets/flot/jquery.flot.js"></script>
     <script src="{{ asset('backend/') }}/assets/flot/jquery.flot.resize.js"></script>
@@ -135,7 +139,7 @@
     <!--flaty scripts-->
     <script src="{{ asset('backend/') }}/js/flaty.js"></script>
     <script src="{{ asset('backend/') }}/js/flaty-demo-codes.js"></script>
-
+    @yield('admin_js')
 </body>
 
 </html>
