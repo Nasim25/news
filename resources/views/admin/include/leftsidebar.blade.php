@@ -49,12 +49,23 @@
                 <b class="arrow fa fa-angle-right"></b>
             </a>
 
-            <!-- BEGIN Submenu -->
             <ul class="submenu">
-                <li><a href="{{route('category.index')}}">District</a></li>
-                <li><a href="{{route('subcategory.index')}}">Subdistrict</a></li>
+                <li><a href="{{route('district.index')}}">District</a></li>
+                <li><a href="{{route('sub-district.index')}}">Subdistrict</a></li>
             </ul>
-            <!-- END Submenu -->
+        </li>
+        
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-desktop"></i>
+                <span>Post</span>
+                <b class="arrow fa fa-angle-right"></b>
+            </a>
+
+            <ul class="submenu">
+                <li><a href="{{route('district.index')}}">Add Post</a></li>
+                <li><a href="{{route('sub-district.index')}}">All Post</a></li>
+            </ul>
         </li>
 
     </ul>
